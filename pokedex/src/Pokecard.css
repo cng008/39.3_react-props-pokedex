@@ -6,6 +6,11 @@
   width: 11em;
   padding: 1em;
   margin: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.Pokecard:hover {
+  transform: scale(1.05);
 }
 
 .Pokecard-name {
