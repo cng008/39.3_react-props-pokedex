@@ -1,9 +1,10 @@
 import React from 'react';
-import Pokedex from './Pokedex';
+import Pokegame from './Pokegame';
 
 const App = () => (
   <>
-    <Pokedex />
+    <h2 className="Pokedex-title">Pokedex</h2>
+    <Pokegame />
   </>
 );
 

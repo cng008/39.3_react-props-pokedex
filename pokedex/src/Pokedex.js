@@ -1,24 +1,31 @@
 import React from 'react';
 import Pokecard from './Pokecard';
-import { pokemon, image } from './PokemonData';
+import { image } from './PokemonData';
 import './Pokedex.css';
 
-const Pokedex = () => (
-  <div className="Pokedex">
-    <h2 className="Pokedex-title">Pokedex</h2>
-    <div className="Pokedex-cards">
-      {pokemon.map(p => (
-        <Pokecard
-          key={p.id}
-          id={p.id}
-          name={p.name}
-          type={p.type}
-          exp={p.base_experience}
-          image={image(p.id)}
-        />
-      ))}
+const Pokedex = props => {
+  let winMessage = null;
+  if (props.isWinner) {
+    winMessage = <p className="Pokedex-winner">THIS HAND WINS!</p>;
+  }
+  return (
+    <div className="Pokedex">
+      <div className="Pokedex-cards">
+        {props.pokemon.map(p => (
+          <Pokecard
+            key={p.id}
+            id={p.id}
+            name={p.name}
+            type={p.type}
+            exp={p.base_experience}
+            image={image(p.id)}
+          />
+        ))}
+      </div>
+      <h4>Total experience: {props.exp}</h4>
+      {winMessage}
     </div>
-  </div>
-);
+  );
+};
 
 export default Pokedex;

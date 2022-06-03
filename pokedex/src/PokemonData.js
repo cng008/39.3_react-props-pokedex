@@ -1,6 +1,6 @@
 /** Index of Pokemon: get image */
 
-const pokemon = [
+const pokemonData = [
   { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
   { id: 7, name: 'Squirtle', type: 'water', base_experience: 63 },
   { id: 11, name: 'Metapod', type: 'bug', base_experience: 72 },
@@ -15,4 +15,5 @@ function image(id) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
-export { pokemon, image };
+export default pokemonData;
+export { image };
