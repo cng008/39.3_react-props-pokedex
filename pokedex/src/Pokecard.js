@@ -1,12 +1,15 @@
 import React from 'react';
+import './Pokecard.css';
+
+/** Individual Pokemon card. */
 
 const Pokecard = ({ name, type, exp, image }) => {
   return (
-    <div>
-      <h1>{name}</h1>
+    <div className="Pokecard">
+      <h1 className="Pokecard-name">{name}</h1>
       <img src={image} />
-      <p>Type: {type}</p>
-      <p>EXP: {exp}</p>
+      <p className="Pokecard-p">Type: {type}</p>
+      <p className="Pokecard-p">EXP: {exp}</p>
     </div>
   );
 };
